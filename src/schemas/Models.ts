@@ -10,6 +10,7 @@ export type GraphLink = {
     source: number
     target: number
     label: string
+    properties?: { [key: string]: any }
 }
 
 export type GraphData = {
