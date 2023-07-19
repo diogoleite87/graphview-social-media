@@ -1,5 +1,5 @@
 export type GraphNode = {
-    id: number
+    id: string
     name: string
     label: string
     image?: string
