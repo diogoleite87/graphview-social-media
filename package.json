@@ -2,6 +2,7 @@
   "name": "graphview-social-media",
   "private": true,
   "version": "0.0.0",
+  "homepage": "graphview-social-media/",
   "type": "module",
   "scripts": {
     "dev": "vite",
