@@ -8,7 +8,7 @@ import FeedBackAlertContext from "../../hooks/useFeedBackAlert";
 import FeedBackAlert from "../FeedBackAlert";
 
 const graphConfig = {
-    type: { value: '2D', options: ['3D', '2D'] },
+    type: { value: '3D', options: ['3D', '2D'] },
     background: '#101020'
 };
 
