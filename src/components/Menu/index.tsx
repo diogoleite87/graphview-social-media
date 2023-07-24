@@ -7,8 +7,10 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import FileOpenIcon from '@mui/icons-material/FileOpen';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import FolderIcon from '@mui/icons-material/Folder';
 import JsonUploadDialog from '../JsonUploadDialog';
 import { GraphData } from '../../schemas';
+import JsonTemplateDialog from '../JsonTemplateDialog';
 
 interface Action {
     icon: JSX.Element;
@@ -27,9 +29,14 @@ export default function Menu({
 }: IMenuProps) {
 
     const [openJsonUploadDialog, setOpenJsonUploadDialog] = useState<boolean>(false)
+    const [openJsonTemplateDialog, setOpenJsonTemplateDialog] = useState<boolean>(false)
 
     const handleInputJSON = () => {
         setOpenJsonUploadDialog(true)
+    }
+
+    const handleJsonTemplate = () => {
+        setOpenJsonTemplateDialog(true)
     }
 
     const handleCleanData = () => {
@@ -41,6 +48,7 @@ export default function Menu({
     };
 
     const actions: Action[] = [
+        { icon: <FolderIcon />, name: 'Utilizar Templates', onClick: handleJsonTemplate },
         { icon: <FileOpenIcon />, name: 'Input JSON', onClick: handleInputJSON },
         { icon: <DeleteIcon />, name: 'Limpar Dados', onClick: handleCleanData },
         { icon: <GitHubIcon />, name: 'GitHub Projeto', onClick: handleGitHubProject },
@@ -49,6 +57,7 @@ export default function Menu({
     return (
         <>
             <JsonUploadDialog state={openJsonUploadDialog} setState={setOpenJsonUploadDialog} setDataGraph={setGraphData} />
+            <JsonTemplateDialog state={openJsonTemplateDialog} setState={setOpenJsonTemplateDialog} setDataGraph={setGraphData} />
             <Box sx={{ transform: 'translateZ(0px)', flexGrow: 1 }}>
                 <SpeedDial
                     ariaLabel="Opções Personalizadas"
