@@ -1,4 +1,4 @@
-import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Paper, Stack, Typography } from "@mui/material"
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Paper, Typography } from "@mui/material"
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import UploadFileIcon from '@mui/icons-material/UploadFile';
 import { GraphData, GraphTemplate } from "../../schemas"
@@ -19,18 +19,14 @@ export default function TemplatePaper({ data, setDataGraph, setState }: ITemplat
     return (
         <Paper elevation={1} sx={{ p: 1 }}>
 
-            <Stack spacing={2} sx={{ alignItems: "center", justifyContent: 'space-between', margin: '2vh' }} direction="row">
-                <Box>
-                    <Typography variant="h5" >{data.title}</Typography>
-                    <Typography variant="subtitle1" >Data: {data.createdAt}</Typography>
-                    <Typography variant="subtitle1" >Créditos: {data.credits}</Typography>
-                    <Typography variant="subtitle1" >Número de Nós: {data.graphData.nodes.length}</Typography>
-                    <Typography variant="subtitle1" >Número de Arestas: {data.graphData.links.length}</Typography>
-                </Box>
-                <Box>
-                    <Button variant="contained" component="label" color="primary" onClick={handleSubmit} endIcon={<UploadFileIcon />} >Povoar</Button>
-                </Box>
-            </Stack>
+            <Box sx={{ alignItems: "center", justifyContent: 'space-between', margin: '2vh' }}>
+                <Typography variant="h6" >{data.title}</Typography>
+                <Typography variant="subtitle1" >Data: {data.createdAt}</Typography>
+                <Typography variant="subtitle1" >Créditos: {data.credits}</Typography>
+                <Typography variant="subtitle1" >Número de Nós: {data.graphData.nodes.length}</Typography>
+                <Typography variant="subtitle1" >Número de Arestas: {data.graphData.links.length}</Typography>
+                <Button size="small" sx={{ mt: 1 }} variant="contained" component="label" color="primary" onClick={handleSubmit} endIcon={<UploadFileIcon />} >Povoar</Button>
+            </Box>
 
             <Accordion>
                 <AccordionSummary
