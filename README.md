@@ -6,7 +6,7 @@ Disponível para 📱 mobile e 💻 desktop em: [https://diogoleite87.github.io/
 
 ## Objetivo
 
-### Este trabalho tem como objetivo construir uma ferramenta para visualização de grafos, decorrente de uma demanda da disciplina Análise de Midias Sociais durante minha graduação em Sistemas de Informação - UFOP.
+### Este trabalho tem como objetivo construir uma ferramenta para visualização de grafos, decorrente de uma demanda da disciplina Análise de Mídias Sociais durante minha graduação em Sistemas de Informação na Universidade Federal de Ouro Preto (UFOP)..
 
 ## Importar Grafos
 
@@ -29,10 +29,10 @@ Disponível para 📱 mobile e 💻 desktop em: [https://diogoleite87.github.io/
 
 ```json
 {
-  "id": string, // id unico
-  "name": string, // nome do nó (sera exibido quando mover cursor por cima do nó)
-  "label": string, // rotulo do nó
-  "color": string // opcional (cor do nó)
+  "id": "string", // id unico
+  "name": "string", // nome do nó (sera exibido quando mover cursor por cima do nó)
+  "label": "string", // rotulo do nó
+  "color": "string" // opcional (cor do nó)
 }
 ```
 
@@ -40,10 +40,10 @@ Disponível para 📱 mobile e 💻 desktop em: [https://diogoleite87.github.io/
 
 ```json
 {
-    "source": string, // id do nó de origem
-    "target": string, // id do nó de destino
-    "label": string, // rotulo da aresta
-    "color": string // opcional (cor da aresta)
+  "source": "string", // id do nó de origem
+  "target": "string", // id do nó de destino
+  "label": "string", // rotulo da aresta
+  "color": "string" // opcional (cor da aresta)
 }
 ```
 
@@ -114,12 +114,12 @@ Disponível para 📱 mobile e 💻 desktop em: [https://diogoleite87.github.io/
 
 ### Rede peer-to-peer Gnutella
 
-#### Disponível em: [Clique aqui](http://snap.stanford.edu/data/p2p-Gnutella08.html).
+#### Base de dados disponível em: [Clique aqui](http://snap.stanford.edu/data/p2p-Gnutella08.html).
 
 ![Rede peer-to-peer Gnutella](public/template-2.png)
 
 ### Rede de Interação no Twitter para o Congresso dos Estados Unidos
 
-#### Disponível em: [Clique aqui](http://snap.stanford.edu/data/congress-twitter.html)
+#### Base de dados disponível em: [Clique aqui](http://snap.stanford.edu/data/congress-twitter.html)
 
 ![Rede de Interação no Twitter para o Congresso dos Estados Unidos](public/template-3.png)
