@@ -9,7 +9,8 @@ import FeedBackAlert from "../FeedBackAlert";
 
 const graphConfig = {
     type: { value: '3D', options: ['3D', '2D'] },
-    background: '#101020'
+    background: '#101020',
+    particle: false
 };
 
 export default function GraphView() {
@@ -22,8 +23,8 @@ export default function GraphView() {
         <Box>
             {loadingError || loadingSuccess ? <FeedBackAlert type={loadingError ? 'error' : 'success'} message={loadingMsg} handleClose={loadingError ? setLoadingError : setLoadingSuccess} /> : <></>}
             {graphConfigState.type == '2D' ?
-                <ForceGraph2D graphData={graphData} backgroundColor={graphConfigState.background} nodeAutoColorBy='label' linkAutoColorBy='label' /> :
-                <ForceGraph3D graphData={graphData} backgroundColor={graphConfigState.background} nodeAutoColorBy='label' linkAutoColorBy='label' />}
+                <ForceGraph2D graphData={graphData} backgroundColor={graphConfigState.background} nodeAutoColorBy='label' linkAutoColorBy='label' linkDirectionalParticles={graphConfigState.particle ? 1 : 0} /> :
+                <ForceGraph3D graphData={graphData} backgroundColor={graphConfigState.background} nodeAutoColorBy='label' linkAutoColorBy='label' linkDirectionalParticles={graphConfigState.particle ? 1 : 0} />}
             <Menu graphData={graphData} setGraphData={setGraphData} />
         </Box>
     )
